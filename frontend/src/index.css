@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #e0e5ec;
+  --text-main: #4a4a4a;
+  --text-light: #8d939b;
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: var(--text-main);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  background-image: url("/mindshelf image for my website.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Neumorphism Utilities */
+.neumorphic {
+  background: var(--bg-color);
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.neumorphic-inset {
+  background: var(--bg-color);
+  box-shadow: inset 6px 6px 10px var(--shadow-dark),
+    inset -6px -6px 10px var(--shadow-light);
+  border-radius: 15px;
+  border: none;
+}
+
+.neumorphic-btn {
+  background: var(--bg-color);
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
+  border-radius: 50px;
+  color: var(--text-main);
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 12px 12px 20px var(--shadow-dark),
+    -12px -12px 20px var(--shadow-light);
+}
+
+.neumorphic-btn:active {
+  transform: translateY(0);
+  box-shadow: inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-light);
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-main);
+}
+
+input {
+  color: var(--text-main);
+}
+
+input::placeholder {
+  color: var(--text-light);
+}
+
+.mustard-theme {
+  --bg-color: #b6e2b5;
+  /* Mustard Greens provided by user */
+  --shadow-light: #9abd99;
+  --shadow-dark: #648a63;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.mustard-theme input,
+.mustard-theme .neumorphic-inset,
+.mustard-theme button,
+.mustard-theme .neumorphic-btn {
+  /* Reset to default root variables for these elements */
+  --bg-color: #e0e5ec;
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
+  background-color: var(--bg-color);
+}
+
+/*before logging in */
+.goldenrod-theme {
+  --bg-color: #EEDD82;
+  /* Light Goldenrod (Xona) */
+  /*--shadow-light: #ffff9e;
+  --shadow-dark: #cbbd6e;*/
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.goldenrod-theme input,
+.goldenrod-theme .neumorphic-inset,
+.goldenrod-theme button,
+.goldenrod-theme .neumorphic-btn {
+  /* Reset to default root variables for these elements */
+  --bg-color: #e0e5ec;
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
+  background-color: var(--bg-color);
+}
+
+/*after logging in */
+.golden-sand-theme {
+  --bg-color: #F0DB7D;
+  /* Golden Sand */
+  --shadow-light: #ffffad;
+  --shadow-dark: #c2b165;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.golden-sand-theme input,
+.golden-sand-theme .neumorphic-inset,
+.golden-sand-theme button,
+.golden-sand-theme .neumorphic-btn {
+  /* Reset to default root variables for these elements */
+  --bg-color: #e0e5ec;
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
+  background-color: var(--bg-color);
+}
